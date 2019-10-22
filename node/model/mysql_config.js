@@ -1,7 +1,7 @@
 var config = {
     database: 'studentcoursemang',
-    username: '*********',
-    password: '***********',
+    username: 'Hchyeria',
+    password: 'HqhMIKASA',
     host: 'localhost',
     port: 3306
 };

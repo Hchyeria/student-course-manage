@@ -34,7 +34,6 @@ class CourseInfo extends Component{
         const { courseInfo, courseScoreInfo, getCourseInfo } = this.props
         const { match: { params: { keyword, cid } }, search } = this.props;
         let coursepaths = /\/course\/(\d+)\/?$/.exec(window.location.pathname);
-        console.log(courseInfo, courseScoreInfo)
         if(courseInfo && courseScoreInfo){
             return(
                 <div>

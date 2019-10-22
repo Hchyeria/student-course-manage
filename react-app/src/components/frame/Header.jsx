@@ -79,21 +79,21 @@ class HeaderCotain extends Component {
                   <Image size='mini' src='/logo.png' />
                 </Menu.Item>
                 <Menu.Item header>{'Welcome,  ' +  this.props.studentInfo.sname }</Menu.Item>
-                  <Link to={`/course`} className='item'>
+                  <Link to={`/course`} className='item' target='_blanck'>
                     课程
                   </Link>
                 <Menu.Menu position='right'>
                   <Dropdown text='更多' pointing className='link item'>
                     <Dropdown.Menu>
-                    <Dropdown.Header><span className='text'>课程管理</span></Dropdown.Header>
+                    <Dropdown.Header><span className='text' target='_blanck'>课程管理</span></Dropdown.Header>
                       <Dropdown.Item>
-                      <Link to={`/search`} className='no-bulue'>查询</Link>
+                      <Link to={`/search`} className='no-bulue' target='_blanck'>查询</Link>
                         </Dropdown.Item>
                       <Dropdown.Header>学生管理</Dropdown.Header>
-                      <Dropdown.Item><Link to={`/student`} className='no-bulue'>学生信息</Link></Dropdown.Item>
+                      <Dropdown.Item><Link to={`/student`} className='no-bulue' target='_blanck'>学生信息</Link></Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Item>
-                        <Link to={`/login`} className='no-bulue'>
+                        <Link to={`/login`} className='no-bulue' target='_blanck'>
                         登出
                         </Link>
                       </Dropdown.Item>

@@ -42,7 +42,6 @@ class Home extends Component{
 
     render(){
         const { selectInfo, sortTablbe, studentInfo, avgScore } = this.props
-        console.log(selectInfo)
         const { match: { params: { keyword, page } }, search } = this.props;
         let coursepaths = /\/course\/(\d+)\/?$/.exec(window.location.pathname);
         if(selectInfo){

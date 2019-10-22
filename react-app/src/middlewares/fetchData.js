@@ -35,15 +35,18 @@ const fetchData = (apiPath, request = {}, state = {}) => {
     }
     return (
         fetch(url, customRequest)
-            .then(res => res.json().then(json => {
-        
+            .then(res => {
+                console.log(res)
+                return res.json()
+            })
+            .then(json => {
+                console.log(json)
                 if (!json.status) {
                     return Promise.reject(json);
                 }
                 const camelizedJsondata = camelizeKeys(json);
                 return camelizedJsondata;
-                }
-            ))
+            })
     );
 };
 
@@ -74,7 +77,7 @@ export default store => next => action => {
     const [ requestType, successType, failureType ] = types;
     next(actionWith({ type: requestType }));
     return fetchData(apiPath, request, store.getState()).then(
-        response =>next(actionWith({
+        response => next(actionWith({
             jsonData: response,
             type: successType
         })),

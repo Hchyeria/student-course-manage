@@ -31,6 +31,7 @@ class Course extends Component{
         const {  getAllCourse } = this.props
         const { sid, sname } = JSON.parse(localStorage.getItem('student'))
         getAllCourse(sid)
+
     }
     
     render(){

@@ -31,6 +31,7 @@ class Login extends React.Component{
         }
         localStorage.clear();
     }
+
     componentWillReceiveProps (nextProps) {
         const { isLogin, history, error, student} = nextProps;
         if (isLogin) {
@@ -38,7 +39,7 @@ class Login extends React.Component{
             localStorage.setItem('isLogin',true);
             history.push( '/')
         }
-        console.log(error)
+       
         this.setState({
             iserror: !!error
         })
